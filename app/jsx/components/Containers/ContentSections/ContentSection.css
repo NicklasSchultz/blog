@@ -1,0 +1,39 @@
+.section-wrapper {
+    font-size: 30px;
+    padding: 100px 100px;
+}
+
+.left-align {
+    float: left;
+    width: 35%;
+    margin-right: 40px;
+    max-height: 500px;
+}
+
+.center-align {
+    width: 80%;
+    height: 400px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    max-height: 500px;
+}
+
+.right-align {
+    float: right;
+    width: 35%;
+    margin-left: 40px;
+    max-height: 500px;
+}
+.left {
+    background-color: white;
+}
+
+.center {
+    background-color: #eaeaea;
+}
+
+.right {
+    background-color: #d8ffc9;
+
+}
