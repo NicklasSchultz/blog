@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Slider from 'react-slick';
-import Carousel from './Carousel';
+import Carousel from '../components/Carousel';
 
 class Photos extends React.Component {
   render() {

@@ -4,22 +4,21 @@
  *
  * ------------------------------------------------------
  *                         [Label]
- *   [Pic item]   [Pic item]   [Pic item]   [Pic item]
+ *   [Promoted item]   [Promoted item]   [Promoted item]
  * ------------------------------------------------------
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PictureContainer from '../../Containers/PictureContainer/PictureContainer'
-import CategoryLabel from '../../Labels/CategoryLabel/CategoryLabel'
-import styles from './PictureLayout.css'
+import PageContainer from '../../components/Containers/PageContainer/PageContainer'
+import CategoryLabel from '../../components/Labels/CategoryLabel/CategoryLabel'
+import styles from './PromoLayout.css'
 
-export default class PictureLayout extends React.Component {
+export default class PromotionLayout extends React.Component {
   render() {
     return (
-      <div className="picture-layout">
+      <div className="promotion-layout">
         <CategoryLabel label={this.props.label}/>
-        <PictureContainer />
-        <PictureContainer />
+        <PageContainer />
       </div>
     )
   }

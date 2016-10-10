@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ImageContainer from './Containers/ImageContainer/ImageContainer'
-import PromoLayout from './Layouts/PromoLayout/PromoLayout'
-import PictureLayout from './Layouts/PictureLayout/PictureLayout'
+import ImageContainer from '../components/Containers/ImageContainer/ImageContainer'
+import PromoLayout from '../Layouts/PromoLayout/PromoLayout'
+import PictureLayout from '../Layouts/PictureLayout/PictureLayout'
 
 export default class Home extends React.Component {
   render() {

@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import {Router, Route, Link, IndexRoute, browserHistory, hashHistory} from 'react-router';
 
 import NavBar from './jsx/components/Navbar';
-import Home from './jsx/components/Home';
-import Blog from './jsx/components/Blog';
-import About from './jsx/components/About';
-import Photos from './jsx/components/Photos';
+import Home from './jsx/Pages/Home';
+import Blog from './jsx/Pages/Blog';
+import About from './jsx/Pages/About';
+import Photos from './jsx/Pages/Photos';
+import Destinations from './jsx/Pages/Destinations'
 
 var destination = document.querySelector("#application");
 const routes = (
@@ -16,6 +17,7 @@ const routes = (
     <Route path='/Blog' component={Blog} />
     <Route path='/About' component={About} />
     <Route path='/Photos' component={Photos} />
+    <Route path='/Destinations' component={Destinations} />
   </Route>
 )
 
