@@ -5,12 +5,14 @@ import ContentSection from '../ContentSections/ContentSections'
 
 export default class TextContainer extends Component {
   render() {
-    let dummy = this.props.dummy
+    let dummy = this.props.dummy;
+    let contentSections = [];
+    dummy.forEach(function(item) {
+        contentSections.push(<ContentSection align={item.alignment} src={item.image} text={item.text}/>)
+    });
     return (
       <div className='text-wrapper'>
-        <ContentSection align={dummy.config[0]} src={dummy.images[1]} text={dummy.text}/>
-        <ContentSection align={dummy.config[1]} src={dummy.images[0]} text={dummy.text}/>
-        <ContentSection align={dummy.config[2]} src={dummy.images[2]} text={dummy.text}/>
+        {contentSections}
       </div>
     )
   }
