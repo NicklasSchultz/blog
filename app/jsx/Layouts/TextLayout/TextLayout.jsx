@@ -5,10 +5,9 @@ import styles from './TextLayout.css'
 
 export default class TextLayout extends React.Component {
   render() {
-
     return (
       <div className="text-layout">
-          <TextContainer dummy={this.props.dummy}/>
+          <TextContainer data={this.props.data} texts={this.props.texts}/>
       </div>
     )
   }

@@ -18,7 +18,7 @@ export default class PromotionLayout extends React.Component {
     return (
       <div className="promotion-layout">
         <CategoryLabel label={this.props.label}/>
-        <PageContainer />
+        <PageContainer data={this.props.data}/>
       </div>
     )
   }

@@ -22,7 +22,7 @@ const routes = (
 )
 
 ReactDOM.render(
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
       {routes}
     </Router>,
     destination

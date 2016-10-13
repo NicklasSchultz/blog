@@ -1,17 +1,44 @@
 import React from 'react';
 import TextLayout from '../Layouts/TextLayout/TextLayout'
+import {getTextById, getAbout} from '../services/ajax'
 
 export default class About extends React.Component {
-  render() {
-    let dummy = [{
-          alignment: "left",
-          text: "Hej, vi är 2 resglada människor. Vi gillar värme och kyla. Sol bad, vinter, snö skidåkning resglada människor. Vi gillar värme och kyla. Sol bad, vinter, snö skidåkning  resglada människor. Vi gillar värme och kyla. Sol bad, vinter, snö skidåkning  resglada människor. Vi gillar värme och kyla. Sol bad, vinter, snö skidåkning  resglada människor. Vi gillar värme och kyla. Sol bad, vinter, snö skidåkning resglada människor. Vi gillar värme och kyla. Sol bad, vinter, snö skidåkning resglada människor. Vi gillar värme och kyla. Sol bad, vinter, snö skidåk 2 resglada människor. Vi gillar värme och kyla. Sol bad, vinter, snö skidåkning resglada människor. Vi gillar värme och kyla. Sol bad, vinter, snö skidåkning  resglada människor. Vi 2 resglada människor. Vi gillar värme och kyla. Sol bad, vinter, snö skidåkning resglada människor. Vi gillar värme och kyla. Sol bad, vinter, snö skidåkning  resglada människor. Vining resglada människor. Vi gillar värme och kyla. Sol bad, vinter, snö skidåkning resglada människor. Vi gillar värme och kyla. Sol bad, vinter, snö skidåkning ",
-          image: "http://media.istockphoto.com/photos/sunset-on-a-lake-picture-id118907537?s=2048x2048"
-    }];
-    return (
-      <div>
-          <TextLayout dummy={dummy}/>
-      </div>
-    )
-  }
+    constructor(props) {
+          super(props)
+          this.state = {
+              data: [],
+              texts: []
+          };
+      }
+      loadAbout() {
+          getAbout().then(
+              function(data) {
+                  this.loadTextEntry(data[1].text)
+                  this.setState({data: data});
+              }.bind(this),
+              function(reason) {
+                  console.error(reason);
+              }.bind(this)
+          );
+      }
+      loadTextEntry(id) {
+          getTextById(id).then(
+              function(data) {
+                  this.setState({texts: data.text});
+              }.bind(this),
+              function(reason) {
+                  console.error(reason);
+              }.bind(this)
+          );
+      }
+      componentDidMount() {
+          this.loadAbout();
+      }
+      render() {
+          return (
+              <div>
+                  <TextLayout data={this.state.data} texts={this.state.texts}/>
+              </div>
+          )
+      }
 }

@@ -1,0 +1,132 @@
+{
+    "destinations": {
+        "1": {
+            "name": "Croatia Dubrovnik",
+            "heroBanner": "http://images.freeimages.com/images/previews/787/croatia-vis-1-1552936.jpg",
+            "thumbnail": "http://images.freeimages.com/images/previews/34a/dubrovnick-1195813.jpg",
+            "id": 1
+        },
+        "2": {
+            "name": "Montenegro",
+            "heroBanner": "http://media.istockphoto.com/photos/beach-of-mauritius-picture-id155073345?s=2048x2048",
+            "thumbnail": "http://images.freeimages.com/images/previews/258/beach-1523354.jpg",
+            "id": 2
+        },
+        "3": {
+            "name": "Dominican Republic",
+            "heroBanner": "http://media.istockphoto.com/photos/wooden-platform-under-coconut-palm-trees-on-beach-picture-id473796816",
+            "thumbnail": "http://images.freeimages.com/images/previews/9ef/republica-dominicana-2-1393523.jpg",
+            "id": 3
+        },
+        "4": {
+            "name": "Thailand",
+            "heroBanner": "http://media.istockphoto.com/photos/sea-and-boat-picture-id155898316?s=2048x2048",
+            "thumbnail": "http://images.freeimages.com/images/previews/a5a/beach-phi-phi-island-1335122.jpg",
+            "id": 4
+        },
+        "5":{
+            "name": "Indonesia",
+            "heroBanner": "http://media.istockphoto.com/photos/sunset-on-a-lake-picture-id118907537?s=2048x2048",
+            "thumbnail": "http://images.freeimages.com/images/previews/c43/surfers-1-1439260.jpg",
+            "id": 5
+        }
+    },
+
+    "_comment": "Text container assets",
+    "blogs": {
+        "1": {
+            "id": 1,
+            "alignment": "left",
+            "text": 1,
+            "thumbnail": "http://images.freeimages.com/images/previews/c50/snow-on-tree-1534379.jpg"
+        },
+        "2": {
+            "id": 2,
+            "alignment": "center",
+            "text": 2,
+            "thumbnail": "http://media.istockphoto.com/photos/sunset-on-a-lake-picture-id118907537?s=2048x2048"
+        },
+        "3": {
+            "id": 3,
+            "alignment": "right",
+            "text": 3,
+            "thumbnail": "http://media.istockphoto.com/photos/wooden-platform-under-coconut-palm-trees-on-beach-picture-id473796816"
+        }
+    },
+    "about": {
+        "1": {
+            "alignment": "left",
+            "text": "om12ab",
+            "thumbnail": "http://images.freeimages.com/images/previews/c50/snow-on-tree-1534379.jpg"
+        }
+    },
+
+    "_comment": "Promoted assets",
+    "promoted": {
+        "1": {
+            "title": "Wine, beer and island jumping",
+            "desc": "We bought a full days boat trip to three small islands just outside the dubrovnik bay. We bought a full days boat trip to three small islands just outside the dubrovnik bay.We bought a full days boat trip to three small islands just outside the dubrovnik bay.",
+            "thumbnail": "http://images.freeimages.com/images/previews/787/croatia-vis-1-1552936.jpg"
+        },
+        "2": {
+            "title": "Bussride of doom",
+            "desc": "We bought a full days boat trip to three small islands just outside the dubrovnik bay. We bought a full days boat trip to three small islands just outside the dubrovnik bay.We bought a full days boat trip to three small islands just outside the dubrovnik bay.",
+            "thumbnail": "http://media.istockphoto.com/photos/sea-and-boat-picture-id155898316?s=2048x2048"
+        },
+        "3": {
+            "title": "Hanging in a tree",
+            "desc": "We bought a full days boat trip to three small islands just outside the dubrovnik bay. We bought a full days boat trip to three small islands just outside the dubrovnik bay.We bought a full days boat trip to three small islands just outside the dubrovnik bay.",
+            "thumbnail": "http://images.freeimages.com/images/previews/9ef/republica-dominicana-2-1393523.jpg"
+        }
+    },
+    "favorites": {
+        "1": {
+            "id": 1,
+            "title": "Beach in Dominican Republic",
+            "desc": "Just chilling on the beach",
+            "thumbnail": "http://images.freeimages.com/images/previews/9ef/republica-dominicana-2-1393523.jpg"
+        },
+        "2": {
+            "id": 2,
+            "title": "Beach in Dominican Republic",
+            "desc": "Just chilling on the beach",
+            "thumbnail": "http://images.freeimages.com/images/previews/9ef/republica-dominicana-2-1393523.jpg"
+        },
+        "3": {
+            "id": 3,
+            "title": "Beach in Dominican Republic",
+            "desc": "Just chilling on the beach",
+            "thumbnail": "http://images.freeimages.com/images/previews/9ef/republica-dominicana-2-1393523.jpg"
+        },
+        "4": {
+            "id": 4,
+            "title": "Beach in Dominican Republic",
+            "desc": "Just chilling on the beach",
+            "thumbnail": "http://images.freeimages.com/images/previews/9ef/republica-dominicana-2-1393523.jpg"
+        },
+        "5": {
+            "id": 5,
+            "title": "Beach in Dominican Republic",
+            "desc": "Just chilling on the beach",
+            "thumbnail": "http://images.freeimages.com/images/previews/9ef/republica-dominicana-2-1393523.jpg"
+        },
+        "6": {
+            "id": 6,
+            "title": "Beach in Dominican Republic",
+            "desc": "Just chilling on the beach",
+            "thumbnail": "http://images.freeimages.com/images/previews/9ef/republica-dominicana-2-1393523.jpg"
+        },
+        "7": {
+            "id": 7,
+            "title": "Beach in Dominican Republic",
+            "desc": "Just chilling on the beach",
+            "thumbnail": "http://images.freeimages.com/images/previews/9ef/republica-dominicana-2-1393523.jpg"
+        },
+        "8": {
+            "id": 8,
+            "title": "Beach in Dominican Republic",
+            "desc": "Just chilling on the beach",
+            "thumbnail": "http://images.freeimages.com/images/previews/9ef/republica-dominicana-2-1393523.jpg"
+        }
+    }
+}

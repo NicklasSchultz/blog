@@ -1,1 +1,4 @@
 node_modules/
+app/bundle.js
+.jshintrc
+npm-debug.log

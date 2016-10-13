@@ -1,0 +1,6 @@
+.responsive-grid div{
+    box-sizing: border-box;
+    float: left;
+    padding: 5px;
+    height: 600px;
+}
