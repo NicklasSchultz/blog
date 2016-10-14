@@ -19,19 +19,20 @@ var imgPath = path.join(__dirname,'imgs/');
 app.set('base', '../');
 var DATA_FILE = path.join(__dirname, 'demo_data.json');
 var TEXT_FILE = path.join(__dirname, 'texts.json');
+var DETAILS_FILE = path.join(__dirname, 'details.json');
 
 app.use(compression())
 app.use(express.static(path.join(__dirname, "../app/")));
 
 app.get('/api/details/:id', function(req, res) {
     console.log('[Server] incoming request= /details/'+req.params.id);
-    fs.readFile(TEXT_FILE, function(err, data) {
+    fs.readFile(DETAILS_FILE, function(err, data) {
         if (err) {
             console.error(err);
             process.exit(1);
         }
         console.log('[Server] send result back ');
-        res.json(JSON.parse(data));
+        res.json(JSON.parse(data)[req.params.id]);
     });
 });
 

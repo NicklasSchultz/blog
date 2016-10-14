@@ -123,7 +123,7 @@ export function getDetails(id) {
     }
     return new Promise(function(resolve, reject) {
         $.ajax({
-            url: urls.details,
+            url: urls.details + "/" + id,
             dataType: "json",
             cache: true
         }).done(function(data){

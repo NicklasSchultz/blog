@@ -1,7 +1,7 @@
 import React from 'react';
 import {getDestinations} from '../services/ajax.js'
 import PictureLayout from '../Layouts/PictureLayout/PictureLayout'
-import {hashHistory} from 'react-router';
+import {Link, hashHistory} from 'react-router';
 
 export default class Destinations extends React.Component {
     constructor(props) {
@@ -13,8 +13,8 @@ export default class Destinations extends React.Component {
 
     onClick(item) {
         hashHistory.push({
-            pathname: '/Details',
-            query: {item}
+            pathname: '/Details/4',
+            state: {item}
         });
     }
 
