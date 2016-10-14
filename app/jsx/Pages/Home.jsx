@@ -33,6 +33,9 @@ export default class Home extends React.Component {
             }.bind(this)
         );
     }
+    handleClick() {
+        console.error('hej');
+    }
     componentDidMount() {
         this.loadPromoted();
         this.loadFavorites();
@@ -42,7 +45,7 @@ export default class Home extends React.Component {
             <div className="main-content-area">
                 <ImageContainer src="http://media.istockphoto.com/photos/wooden-platform-under-coconut-palm-trees-on-beach-picture-id473796816"/>
                 <PromoLayout label="Latest Blog Posts" data={this.state.data}/>
-                <PictureLayout label="Our favorite destinations" data={this.state.favorites}/>
+                <PictureLayout label="Our favorite destinations" data={this.state.favorites} callback={this.handleClick}/>
             </div>
         )
     }

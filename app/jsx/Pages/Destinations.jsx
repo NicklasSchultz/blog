@@ -1,6 +1,7 @@
 import React from 'react';
 import {getDestinations} from '../services/ajax.js'
 import PictureLayout from '../Layouts/PictureLayout/PictureLayout'
+import {hashHistory} from 'react-router';
 
 export default class Destinations extends React.Component {
     constructor(props) {
@@ -9,10 +10,17 @@ export default class Destinations extends React.Component {
             data: []
         };
     }
+
+    onClick(item) {
+        hashHistory.push({
+            pathname: '/Details',
+            query: {item}
+        });
+    }
+
     loadDestinations() {
         getDestinations().then(
             function(data) { // Success
-                console.error(data);
                 this.setState({data: data});
             }.bind(this),
             function(reason) { // Failed
@@ -27,7 +35,7 @@ export default class Destinations extends React.Component {
     render() {
         return (
             <div>
-                <PictureLayout label="CAmillas" data={this.state.data}/>
+                <PictureLayout label="CAmillas" data={this.state.data} callback={this.onClick}/>
             </div>
         )
     }

@@ -10,10 +10,10 @@ export default class ResponsiveGrid extends React.Component {
     this.props.data.forEach(function(row) {
         let columns = []
         row.cols.forEach(function(column) {
-            columns.push(<Column col={column.columnSpan} src={column.image} />)
+            columns.push(<Column col={column.columnSpan} src={column.image} key={column.id} />)
         })
         content.push(
-            <Row>
+            <Row key={row.cols[0].id}>
                 {columns}
             </Row>
         )

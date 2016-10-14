@@ -8,6 +8,7 @@ import Blog from './jsx/Pages/Blog';
 import About from './jsx/Pages/About';
 import Photos from './jsx/Pages/Photos';
 import Destinations from './jsx/Pages/Destinations'
+import Details from './jsx/Pages/Details'
 
 var destination = document.querySelector("#application");
 const routes = (
@@ -18,6 +19,7 @@ const routes = (
     <Route path='/About' component={About} />
     <Route path='/Photos' component={Photos} />
     <Route path='/Destinations' component={Destinations} />
+    <Route path='/Details' component={Details} />
   </Route>
 )
 

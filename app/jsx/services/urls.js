@@ -6,5 +6,7 @@ export const urls = {
     "promoted": contentUrl + "/promoted",
     "favorites": contentUrl + "/favorites",
     "text": textUrl,
-    "about": contentUrl + "/about"
+    "about": contentUrl + "/about",
+    "imgs": contentUrl + "/imgs",
+    "details": contentUrl + "/details"
 };

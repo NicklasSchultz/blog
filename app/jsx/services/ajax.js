@@ -1,5 +1,6 @@
 import {urls} from './urls.js'
-const CACHE_TYPES: {
+
+const CACHE_TYPES = {
     "PROMOTED": "PROMOTED",
     "DESTINATIONS": "DESTINATIONS",
     "TEXTS": "TEXTS",
@@ -7,7 +8,9 @@ const CACHE_TYPES: {
     "FAVORITES": "FAVORITES",
     "ABOUT": "ABOUT"
 }
-let cache = [];
+
+var cache = []
+
 export function ajax(options) {
     return new Promise(function (resolve, reject) {
         $.ajax(options).done(resolve).fail(reject);
@@ -24,7 +27,7 @@ export function getDestinations() {
             dataType: "json",
             cache: true
         }).done(function(data){
-            cache["destinations"] = data;
+            cache[CACHE_TYPES.DESTINATIONS] = data;
             resolve(data);
         }).fail(reject);
     });
@@ -39,7 +42,10 @@ export function getPromoted() {
             url: urls.promoted,
             dataType: "json",
             cache: true
-        }).done(resolve).fail(reject);
+        }).done(function(data){
+            cache[CACHE_TYPES.PROMOTED] = data;
+            resolve(data);
+        }).fail(reject);
     });
 }
 
@@ -52,7 +58,10 @@ export function getFavorites() {
             url: urls.favorites,
             dataType: "json",
             cache: true
-        }).done(resolve).fail(reject);
+        }).done(function(data){
+            cache[CACHE_TYPES.FAVORITES] = data;
+            resolve(data);
+        }).fail(reject);
     });
 }
 
@@ -65,7 +74,11 @@ export function getBlogs() {
             url: urls.blogs,
             dataType: "json",
             cache: true
-        }).done(resolve).fail(reject);
+        }).done(function(data){
+            cache[CACHE_TYPES.BLOGS] = data;
+            console.error(cache);
+            resolve(data);
+        }).fail(reject);
     });
 }
 
@@ -79,7 +92,11 @@ export function getTexts() {
             url: urls.text,
             dataType: "json",
             cache: true
-        }).done(resolve).fail(reject);
+        }).done(function(data){
+            cache[CACHE_TYPES.TEXTS] = data;
+            console.log(cache);
+            resolve(data);
+        }).fail(reject);
     });
 }
 export function getTextById(id) {
@@ -89,6 +106,31 @@ export function getTextById(id) {
             dataType: "json",
             cache: true
         }).done(resolve).fail(reject);
+    });
+}
+export function getImage() {
+    return new Promise(function (resolve, reject) {
+        $.ajax({
+            url: urls.imgs,
+            dataType: "json",
+            cache: true
+        }).done(resolve).fail(reject);
+    });
+}
+export function getDetails(id) {
+    if(cache[CACHE_TYPES.DETAILS]) {
+        return Promise.resolve(cache[CACHE_TYPES.DETAILS]);
+    }
+    return new Promise(function(resolve, reject) {
+        $.ajax({
+            url: urls.details,
+            dataType: "json",
+            cache: true
+        }).done(function(data){
+            cache[CACHE_TYPES.DETAILS] = data;
+            console.log(cache);
+            resolve(data);
+        }).fail(reject);
     });
 }
 

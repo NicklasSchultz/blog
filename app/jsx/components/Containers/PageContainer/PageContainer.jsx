@@ -5,7 +5,6 @@ import PromoContainer from '../PromoContainer/PromoContainer'
 
 export default class PageContainer extends React.Component {
     render() {
-        console.error(this.props.data);
         let content = [];
 
         Object.keys(this.props.data).map(function (key) {

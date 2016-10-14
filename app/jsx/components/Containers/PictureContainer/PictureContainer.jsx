@@ -8,7 +8,8 @@ export default class PictureContainer extends Component {
       let content = [];
       Object.keys(this.props.data).map(function (key) {
           let item = this.props.data[key]
-          content.push(<ImageButton src={item.thumbnail} text={item.title} subtext={item.desc} key={item.id}/>);
+          let boundClick = this.props.callback.bind(this, item);
+          content.push(<ImageButton src={item.thumbnail} text={item.title} subtext={item.desc} key={item.id} callback={boundClick}/>);
       }.bind(this));
     return (
       <div className='picture-wrapper'>

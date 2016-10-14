@@ -15,12 +15,25 @@ var path = require('path');
 var express = require('express');
 var compression = require('compression')
 var app = express();
+var imgPath = path.join(__dirname,'imgs/');
 app.set('base', '../');
 var DATA_FILE = path.join(__dirname, 'demo_data.json');
 var TEXT_FILE = path.join(__dirname, 'texts.json');
 
 app.use(compression())
 app.use(express.static(path.join(__dirname, "../app/")));
+
+app.get('/api/details/:id', function(req, res) {
+    console.log('[Server] incoming request= /details/'+req.params.id);
+    fs.readFile(TEXT_FILE, function(err, data) {
+        if (err) {
+            console.error(err);
+            process.exit(1);
+        }
+        console.log('[Server] send result back ');
+        res.json(JSON.parse(data));
+    });
+});
 
 app.get('/text/', function(req, res) {
     console.log('[Server] incoming request= /text/');
@@ -32,6 +45,15 @@ app.get('/text/', function(req, res) {
         console.log('[Server] send result back ');
         res.json(JSON.parse(data));
     });
+});
+
+app.get('/imgs/:file', function(req, res) {
+    var imgPaths = imgPath + '' + req.params.file;
+    console.log('[Server] incoming request= /imgs/' + imgPaths);
+
+    var img = fs.readFileSync(imgPaths);
+     res.writeHead(200, {'Content-Type': 'image/jpg' });
+     res.end(img, 'binary');
 });
 
 app.get('/text/:id', function(req, res) {

@@ -18,7 +18,7 @@ export default class PictureLayout extends React.Component {
     return (
       <div className="picture-layout">
         <CategoryLabel label={this.props.label}/>
-        <PictureContainer data={this.props.data}/>
+        <PictureContainer data={this.props.data} callback={this.props.callback}/>
       </div>
     )
   }
