@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, "../app/")));
 
 app.get('/api/details/:id', function(req, res) {
     console.log('[Server] incoming request= /details/'+req.params.id);
-    fs.readFile(DETAILS_FILE, function(err, data) {
+    fs.readFile(DETAILS_FILE, "utf8", function(err, data) {
         if (err) {
             console.error(err);
             process.exit(1);
@@ -38,7 +38,7 @@ app.get('/api/details/:id', function(req, res) {
 
 app.get('/text/', function(req, res) {
     console.log('[Server] incoming request= /text/');
-    fs.readFile(TEXT_FILE, function(err, data) {
+    fs.readFile(TEXT_FILE, "utf8", function(err, data) {
         if (err) {
             console.error(err);
             process.exit(1);
@@ -59,7 +59,7 @@ app.get('/imgs/:file', function(req, res) {
 
 app.get('/text/:id', function(req, res) {
     console.log('[Server] incoming request text/ with id='+ req.params.id);
-    fs.readFile(TEXT_FILE, function(err, data) {
+    fs.readFile(TEXT_FILE, "utf8", function(err, data) {
         if (err) {
             console.error(err);
             process.exit(1);
@@ -71,7 +71,7 @@ app.get('/text/:id', function(req, res) {
 
 app.get('/api/:field', function(req, res) {
     console.log('Server incoming request= /api/' + req.params.field);
-    fs.readFile(DATA_FILE, function(err, data) {
+    fs.readFile(DATA_FILE, "utf8", function(err, data) {
         if (err) {
             console.error(err);
             process.exit(1);

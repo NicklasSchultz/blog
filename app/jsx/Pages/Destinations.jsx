@@ -13,7 +13,7 @@ export default class Destinations extends React.Component {
 
     onClick(item) {
         hashHistory.push({
-            pathname: '/Details/4',
+            pathname: '/Details',
             state: {item}
         });
     }

@@ -19,7 +19,7 @@ const routes = (
     <Route path='/About' component={About} />
     <Route path='/Photos' component={Photos} />
     <Route path='/Destinations' component={Destinations} />
-    <Route path='/Details/:id' component={Details} />
+    <Route path='/Details' component={Details} />
   </Route>
 )
 

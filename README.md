@@ -5,6 +5,6 @@ Make sure you have node installed, then run
 Run `npm install`
 
 ## Launch server:
-Run: `webpack-dev-server --progress --colors --content-base app/`
+Run: `npm start`
 
 Then open a browser at localhost:8080
